@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import Photos
 
 @main
-struct SwiftUiTestApp: App {
+struct PhotoDeduplicatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainScreenView()
+                .environmentObject(PhotoManager.shared)
         }
     }
 }
